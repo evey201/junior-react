@@ -1,0 +1,27 @@
+// primary colors
+$white: rgb(255, 255, 255);
+$black: rgb(17, 17, 17);
+
+// secndary colors
+$green: rgb(145, 196, 131);
+$grey: rgb(238, 238, 238);
+
+//fonts
+$titleFonts: Arial, Helvetica, sans-serif;
+$bodyFonts: 'Times New Roman', Times, serif;
+
+
+//mixins
+@mixin header($direction, $value) {
+  display: flex;
+  position: absolute;
+  $direction: $value;
+}
+
+@mixin PDP() {
+  position: relative;
+  margin: 1.5%;
+  padding: 1.5%;
+  box-sizing: border-box;
+  background-color: $white;
+}
