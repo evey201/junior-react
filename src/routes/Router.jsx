@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import Header from "../componens/header/Header.jsx";
-import PLP from "../componens/PLP/PLP.jsx";
-import PDP from "../componens/PDP/PDP.jsx";
-import Errorpage from "../componens/errorPage/Errorpage.jsx";
+import Header from "../components/header/Header.jsx";
+import PLP from "../components/PLP/PLP.jsx.js";
+import PDP from "../components/PDP/PDP.jsx.js";
+import Errorpage from "../components/errorPage/Errorpage.jsx.js";
 // import Cart from "./cart.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useQuery } from "@apollo/client";
@@ -12,6 +12,7 @@ import NAMES_QUERY from "../graphQLdata/GraphQL.jsx";
 export default function Router() {
 
   const { loading, error, data } = useQuery(NAMES_QUERY);
+  console.log(data)
   const [ PLPcount, setPLP ] = useState(0); 
   const [ symbolCount, setSymbol ] = useState(0);  
   const [ PDPCount, setPDP ] = useState(0);  
